@@ -1,0 +1,254 @@
+#menu {
+    width: 100%;
+    height: 260vh;
+    background-color: #f7fcff;
+    position: relative;
+}
+
+#topBorder {
+    top: -200px;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+}
+
+#bottomBorder {
+    width: 100%;
+    height: 15%;
+}
+
+#menu #menuHeading {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#menuHeading h1 {
+    color: #ad62aa;
+    font-size: 5em;
+}
+
+#menu #menuList {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#menuList h2 {
+    color: #eab9c9;
+    cursor: pointer;
+    border: 2px solid none;
+    border-bottom: solid;
+    border-bottom-color: #eab9c900;
+    font-size: 2em;
+}
+
+#productCardsCnt {
+    width: 100%;
+    height: 70%;
+}
+
+#productCardsCntOfCakes {
+    width: 100%;
+    height: 100%;
+}
+
+#productCardsCntOfCupCakes {
+    width: 100%;
+    height: 100%;
+}
+
+#productCardsRow1 {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#productCardsRow2 {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+:root {
+    --primary-color: #ad62aa;
+    --text-color: #333333;
+    --background-color: #f5f5f7;
+    --card-background: #ffffff;
+}
+
+.product-card {
+    width: 300px;
+    margin: 2rem auto;
+    background-color: var(--card-background);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card__image img {
+    transform: scale(1.05);
+}
+
+.product-card__info {
+    padding: 20px;
+}
+
+.product-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-card__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-card__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__price {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.product-card__btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card__btn:hover {
+    background-color: #C71729;
+}
+
+#productCardsCntOfCakes {
+    display: none;
+}
+
+#productCardsCntOfCupCakes {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #menu {
+        height: 430vh;
+    }
+    #topBorder {
+        top: -80px;
+        height: 3%;
+    }
+    
+    #bottomBorder {
+        height: 3%;
+        position: absolute;
+        bottom: -50px;
+    }
+
+    #menu #menuHeading {
+        height: 10%;
+    }
+
+    #menu #menuList {
+        gap: 40px;
+    }
+
+    #productCardsRow1 {
+        flex-direction: column;
+        width: 100%;
+        height: 55%;
+        gap: 20px;
+        justify-content: s;
+    }
+    
+    #productCardsRow2 {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 55%;
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 80%;
+        height: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width: 370px) and (min-width: 300px ) {
+
+    #menu {
+        height: 510vh;
+    }
+
+    #productCardsRow1 {
+        width: 100%;
+        height: 56%;
+    }
+    
+    #productCardsRow2 {
+        width: 100%;
+        height: 56%;
+    }
+}
+
+@media screen and (max-width: 380px) and (min-width: 371px ) {
+
+    #menu {
+        height: 600vh;
+    }
+
+    #productCardsRow1 {
+        width: 100%;
+        height: 53%;
+    }
+    
+    #productCardsRow2 {
+        width: 100%;
+        height: 53%;
+    }
+
+}

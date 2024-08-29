@@ -1,0 +1,168 @@
+footer {
+    width: 100%;
+    height: 100vh;
+    background-color: #151414;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footerRow1 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #747474;
+}
+
+.contactInfo {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.contactInfo img {
+    width: 40px;
+    height: auto;
+}
+
+.rightContactInfo h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.rightContactInfo span {
+    font-size: 1em;
+    color: #747474;
+}
+
+#footerRow2 {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footerRow2 .footerLinks {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.footerLinks img {
+    width: 40%;
+    border-radius: 25%;
+}
+
+.footerLinks p {
+    color: #747474;
+    text-align: justify;
+}
+
+.footerLinks h1 {
+    font-size: 2.5em;
+}
+
+.footerLinks h1::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #ad62aa;
+    margin-top: 5px;
+}
+
+.footerLinks ul {
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.footerLinks ul li a {
+    text-decoration: none;
+    color: #747474;
+}
+
+.footerLinks ul li a:hover {
+    color: #fff;
+}
+
+.footerLinks .socials {
+    display: flex;
+}
+
+.footerLinks .socials img {
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#footerRightsSection {
+    width: 100%;
+    height: 10%;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footerRightsSection span {
+    color: #747474;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        height: 120vh;
+    }
+
+    #footerRow1 {
+        justify-content: center;
+        height: 10%;
+    }
+
+    .contactInfo {
+        width: 42%;
+        height: 100%;
+        gap: 10px;
+        box-sizing: border-box;
+        font-size: 0.6em;
+    }
+
+    .contactInfo img {
+        width: 100%
+    }
+
+    .contactInfoImp {
+        display: none;
+    }
+
+    #footerRow2 {
+        flex-direction: column;
+        gap: 30px;
+        height: 60%;
+    }
+
+    #footerRow2 .footerLinks {
+        width: 100%;
+        padding: 0px 30px;
+    }
+
+    .footerLinks img {
+        width: 20%;
+    }
+
+    #footerRightsSection {
+        font-size: 0.7em;
+    }
+}

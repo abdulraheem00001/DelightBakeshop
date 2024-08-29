@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpg" type="image/png">
+    <link rel="stylesheet" href="styleSheets/nav.css">
+    <link rel="stylesheet" href="styleSheets/home.css">
+    <link rel="stylesheet" href="styleSheets/menu.css">
+    <link rel="stylesheet" href="styleSheets/orderForm.css">
+    <link rel="stylesheet" href="styleSheets/footer.css">
+    <title>Delight Bakeshop | Home</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#footer">socials</a></li>
+            <li><a href="mailto:delightbakeshop797@gmail.com">Contact Us</a></li>
+            <ul class="nav-btns">
+                <a href="#orderForm">
+                    <li><button class="login-button">Order Now</button></li>
+                </a>
+            </ul>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="home">
+            <div id="leftHome">
+                <h1>Welcome</h1>
+                <h2 style="color: #eab9c9;">to Delight Bakeshop</h2>
+                <div class="orderbutton"><a class="order" href="#orderForm">order now</a></div>
+            </div>
+            <div id="rightHome">
+                <img src="images/home image.png" alt="cake">
+            </div>
+        </div>
+        <div id="menu">
+            <img id="topBorder" src="images/top border.png" alt="">
+            <div id="menuHeading">
+                <h1>Menu</h1>
+            </div>
+            <div id="menuList">
+                <h2>Cakes</h2>
+                <h2>Cup Cakes</h2>
+            </div>
+            <div id="productCardsCnt">
+                <div id="productCardsCntOfCakes">
+                </div>
+                <div id="productCardsCntOfCupCakes">
+                </div>
+            </div>
+            <img id="bottomBorder" src="images/bottom border.png" alt="">
+        </div>
+        <div id="orderForm">
+            <div id="orderFormRow">
+                <h1>Place Your Order Here</h1>
+            </div>
+
+            <div class="form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="master-container">
+                    <input type="hidden" name="access_key" value="46d22fe2-352a-4e73-968e-c1b3c4b6ca6f">
+                    <div class="card cart">
+                        <label class="title">Your cart</label>
+                        <div class="products">
+                            <div class="product">
+                                <div id="leftProduct">
+                                    <img src="images/cakes images/cake1.jpg" alt="cake">
+                                    <span>Cake 1</span>
+                                    <!-- Hidden input to store cake name -->
+                                    <input type="hidden" name="cakeName" id="cakeNameInput" value="Cake 1">
+                                </div>
+                                <div id="rightProduct">
+                                    <h2>Select Size</h2>
+                                    <div id="radio">
+                                        <div id="radioBox1">
+                                            <input type="radio" name="pound" value="1" id="pound">
+                                            <label for="onePound">1 Pound</label>
+                                        </div>
+                                        <div id="radioBox2">
+                                            <input type="radio" name="pound" value="2" id="pound">
+                                            <label for="twoPound">2 Pound</label>
+                                        </div>
+                                        <div id="radioBox3">
+                                            <input type="radio" name="pound" value="3" id="pound">
+                                            <label for="threePound">3 Pound</label>
+                                        </div>
+                                    </div>
+                                    <div class="quantity">
+                                        <button type="button" id="decrement">
+                                            <svg fill="none" viewBox="0 0 24 24" height="14" width="14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
+                                                    stroke="#47484b" d="M20 12L4 12"></path>
+                                            </svg>
+                                        </button>
+                                        <label>1</label>
+                                        <button type="button" id="increment">
+                                            <svg fill="none" viewBox="0 0 24 24" height="14" width="14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5"
+                                                    stroke="#47484b" d="M12 4V20M20 12H4"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <label class="price small">Rs1000</label>
+                                    <!-- Hidden input to store quantity -->
+                                    <input type="hidden" name="quantity" id="quantityInput" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card personalInformation">
+                        <label class="title">Personal Information</label>
+                        <div class="personalInformationForm">
+                            <input type="text" placeholder="Fullname" name="Username" class="input_field" required>
+                            <input type="email" placeholder="Email" name="Email" class="input_field" required>
+                            <input type="number" placeholder="Phome number" name="Phonenumber" class="input_field"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="card checkout">
+                        <label class="title">Checkout</label>
+                        <div class="details">
+                            <span>Your cart subtotal:</span>
+                            <span id="subTotal">Rs1000</span>
+                            <span>Shipping fees:</span>
+                            <span id="shippingFee">Rs200</span>
+                        </div>
+                        <div class="checkout--footer">
+                            <label id="totalPrice" class="price"><sup>RS</sup>1200</label>
+                            <input type="submit" value="check out" class="checkout-btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div id="footerRow1">
+            <div class="contactInfo">
+                <div class="leftContactInfo">
+                    <img src="images/icon-location.png" alt="icon">
+                </div>
+                <div class="rightContactInfo">
+                    <h1>Find Us</h1>
+                    <span>Lahore, Punjab, Pakistan</span>
+                </div>
+            </div>
+            <div class="contactInfo">
+                <div class="leftContactInfo">
+                    <img src="images/icon-phone.png" alt="icon">
+                </div>
+                <div class="rightContactInfo">
+                    <h1>Contact Us</h1>
+                    <span>+923334335854</span>
+                </div>
+            </div>
+            <div class="contactInfo contactInfoImp">
+                <div class="leftContactInfo">
+                    <img src="images/icon-mail.png" alt="icon">
+                </div>
+                <div class="rightContactInfo">
+                    <h1>Mail Us</h1>
+                    <span>delightbakeshop797@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div id="footerRow2">
+            <div class="footerLinks">
+                <img src="images/logo.jpg" alt="">
+                <p>Welcome to our homemade cake shop, where each cake is baked with love and the finest ingredients. We
+                    offer delicious, fresh cakes perfect for any occasion, made just like you would at home. Enjoy a
+                    taste of homemade goodness with every bite!</p>
+            </div>
+            <div class="footerLinks">
+                <h1>Useful Links</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="mailto:delightbakeshop797@gmail.com">Contact</a></li>
+                    <li><a href="#orderForm">Order Now</a></li>
+                </ul>
+            </div>
+            <div class="footerLinks">
+                <h1>Follow us</h1>
+                <div class="socials">
+                    <a href="mailto:delightbakeshop797@gmail.com" target="_blank">
+                        <img src="images/icons-whatsapp.png" alt="">
+                    </a>
+                    <a href="http://" target="_blank">
+                        <img src="images/icons-twitterx.png" alt="">
+                    </a>
+                    <a href="http://" target="_blank">
+                        <img src="images/icons-instagram.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="footerRightsSection">
+            <span>Copyright © 2024, All Right Reserved.</span>
+            <div id="credits">
+                <h3>Desgin & Develop by</h3>
+                <span>Abdul Raheem</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/menuListSelector.js"></script>
+    <script src="scripts/cardsGenerator.js"></script>
+</body>
+
+</html>

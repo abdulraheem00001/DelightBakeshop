@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+}
+html, body {
+    overflow-x: hidden; /* Hides the horizontal scroll bar */
+}
+/* Styling nav */
+nav {
+    height: 6rem;
+    width: 100vw;
+    background-color: #ad62aa;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+/*Styling logo*/
+.logo {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.logo img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+/*Styling Links*/
+.nav-links {
+    font-size: 2em;
+    display: flex;
+    list-style: none;
+    width: 70vw;
+    padding: 0 0.7vw;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.nav-btns {
+    display: flex;
+    list-style: none;
+    width: 20vw;
+    padding: 0 0.7vw;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: #fff;
+}
+
+.nav-links li a:hover {
+    color: #eab9c9;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #eab9c9;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::after {
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button {
+    background-color: transparent;
+    border: 1.5px solid #fff;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.login-button:hover {
+    color: #131418;
+    background-color: #fff;
+    border: 1.5px solid #fff;
+    transition: all ease-in-out 350ms;
+}
+
+.order-button {
+    color: #fff;
+    background-color: #eab9c9;
+    border: 1.5px solid #eab9c9;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 1.5px solid #fff;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 1100px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .nav-links {
+        justify-content: space-around;
+        position: fixed;
+        background: #ad62aa;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open{
+        clip-path: circle(2000px at 90% -10%);
+        -webkit-clip-path: circle(2000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+
+    .nav-btns {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
